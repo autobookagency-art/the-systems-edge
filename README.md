@@ -53,7 +53,8 @@ Placeholders currently in use:
 |---|---|
 | `[AFFILIATE_LINK_ODDSMONKEY]` | OddsMonkey |
 | `[AFFILIATE_LINK_PROFITACCUMULATOR]` | Profit Accumulator |
-| `[AFFILIATE_LINK_FTMO]` | FTMO (or swap for GoatFunded) |
+| `[AFFILIATE_LINK_WISE]` | Wise (wise.com/affiliates) |
+| `[AFFILIATE_LINK_TRADING212]` | Trading 212 (trading212.com/refer) |
 | `[AFFILIATE_LINK_AI_WRITING_TOOL]`, `[AFFILIATE_LINK_PROPERTY_CRM]` | choose a programme first |
 | `[AFFILIATE_LINK_BEGINNER_MATCHED_BETTING_GUIDE]` | decide: your own guide post, or a service |
 

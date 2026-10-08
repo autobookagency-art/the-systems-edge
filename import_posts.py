@@ -20,7 +20,7 @@ DEST = Path(__file__).parent / "_posts"
 LINKS = {
     "matched betting service": "ODDSMONKEY",
     "matched betting training platform": "PROFITACCUMULATOR",
-    "prop firm name": "GOATFUNDED",
+    "prop firm name": "WISE",
     "ai writing assistant": "AI_WRITING_TOOL",
     "property crm software": "PROPERTY_CRM",
 }

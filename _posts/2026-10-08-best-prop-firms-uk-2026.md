@@ -60,7 +60,7 @@ Be wary of constant "flash sales" with countdown timers, rule changes applied re
 
 There's no single answer to the best prop firms UK 2026 question, because the right choice depends on your strategy, your budget and how much risk you're comfortable with. Use the checklist above, read every rule and only pay a fee you can afford to lose.
 
-If you've done your homework and want to compare a firm's current terms, you can start here: <mark class="aff">[AFFILIATE_LINK_GOATFUNDED]</mark>. Check the latest rules directly on their site before you commit.
+If you've done your homework and want to compare a firm's current terms, you can start here: <mark class="aff">[AFFILIATE_LINK_WISE]</mark>. Check the latest rules directly on their site before you commit.
 
 ---
 
