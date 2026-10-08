@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-GB' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">The Systems <span>Edge</span></a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">All posts</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> some links on this site are affiliate links. If you
+        sign up or buy through them, I may earn a commission at no extra cost to you. It doesn't change what I
+        recommend, and I only write about things I'd consider using myself.</p>
+      <p class="risk"><strong>18+ only.</strong> Gambling can be addictive - play responsibly. Matched betting is not
+        risk-free, and trading carries a high risk of losing money. Nothing here is financial advice.
+        Free, confidential help: <a href="https://www.begambleaware.org" rel="noopener">BeGambleAware</a>, 0808 8020 133.</p>
+      <p class="copy">&copy; {{ 'now' | date: '%Y' }} {{ site.title }} &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+    </div>
+  </footer>
+</body>
+</html>

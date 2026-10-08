@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {% if page.topic %}&middot; <span class="tag">{{ page.topic }}</span>{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <aside class="post-disclosure">
+    <strong>Affiliate disclosure:</strong> this post contains affiliate links. If you sign up through them I may earn
+    a commission, at no extra cost to you. It never changes what I recommend.
+  </aside>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <p class="disclosure"><strong>Affiliate disclosure:</strong> links marked as offers on this page may be affiliate
+      links. I may earn a commission if you sign up, at no extra cost to you.</p>
+  </footer>
+</article>

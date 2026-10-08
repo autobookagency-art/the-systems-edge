@@ -1,0 +1,32 @@
+title: The Systems Edge
+tagline: Systems that make money - matched betting, prop firm trading, AI tools for business.
+description: Practical, no-hype guides to matched betting, prop firm trading and AI tools for business, by Matteo, a UK trader and agency operator.
+lang: en-GB
+timezone: Europe/London
+
+# DEPLOY SETTINGS - see README.md.
+#  * Repo named <username>.github.io  -> url: https://<username>.github.io , baseurl: ""
+#  * Any other repo name (e.g. affiliate-blog) -> url: https://<username>.github.io , baseurl: "/affiliate-blog"
+url: "https://autobookagency-art.github.io"
+baseurl: "/the-systems-edge"
+
+author: Matteo
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: /:year/:month/:slug/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - import_posts.py
+  - vendor
+  - node_modules

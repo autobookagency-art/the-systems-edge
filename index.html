@@ -1,0 +1,25 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <h1>Systems that make money.</h1>
+  <p>Practical, no-hype guides to matched betting, prop firm trading and AI tools for business - from a UK trader
+    and agency operator.</p>
+</section>
+
+<h2 class="section-title">Latest posts</h2>
+<div class="cards">
+  {% for post in site.posts limit: 9 %}
+  <a class="card" href="{{ post.url | relative_url }}">
+    <span class="meta">{{ post.date | date: "%-d %b %Y" }}{% if post.topic %} &middot; {{ post.topic }}{% endif %}</span>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.description | truncate: 150 }}</p>
+    <span class="more">Read the guide &rarr;</span>
+  </a>
+  {% else %}
+  <p>No posts yet.</p>
+  {% endfor %}
+</div>
+
+{% if site.posts.size > 9 %}<p class="all"><a href="{{ '/blog/' | relative_url }}">See all {{ site.posts.size }} posts &rarr;</a></p>{% endif %}
