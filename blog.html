@@ -1,13 +1,12 @@
 ---
-layout: page
-title: All posts
+layout: default
+title: Guides
 permalink: /blog/
 ---
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li>
-    <span class="meta">{{ post.date | date: "%-d %b %Y" }}</span>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+<header class="page-head">
+  <h1>All guides</h1>
+  <p class="hero-sub">{{ site.posts.size }} guides so far.</p>
+</header>
+<div class="cards">
+  {% for post in site.posts %}{% include card.html post=post %}{% endfor %}
+</div>

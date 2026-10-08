@@ -1,15 +1,18 @@
 ---
 layout: default
 ---
+{%- assign t = page.topic | default: "tech" -%}
 <article class="post">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/blog/' | relative_url }}">Guides</a></nav>
   <header class="post-header">
-    <p class="meta">
+    <p class="meta"><span class="tag tag-{{ t }}">{{ t }}</span>
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
-      {% if page.topic %}&middot; <span class="tag">{{ page.topic }}</span>{% endif %}
-    </p>
+      &middot; {{ page.content | number_of_words | divided_by: 220 | plus: 1 }} min read</p>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
   </header>
+
+  <div class="post-hero"><img src="{{ '/assets/img/thumb-' | append: t | append: '.svg' | relative_url }}" alt="" width="640" height="360"></div>
 
   <aside class="post-disclosure">
     <strong>Affiliate disclosure:</strong> this post contains affiliate links. If you sign up through them I may earn
@@ -25,3 +28,11 @@ layout: default
       links. I may earn a commission if you sign up, at no extra cost to you.</p>
   </footer>
 </article>
+
+{%- assign related = site.posts | where_exp: "p", "p.url != page.url" | where: "topic", page.topic | slice: 0, 2 -%}
+{% if related.size > 0 %}
+<section class="related">
+  <h2 class="section-title">More {{ t }} guides</h2>
+  <div class="cards">{% for p in related %}{% include card.html post=p %}{% endfor %}</div>
+</section>
+{% endif %}

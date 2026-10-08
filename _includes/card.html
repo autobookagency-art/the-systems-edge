@@ -1,0 +1,10 @@
+{%- assign t = include.post.topic | default: "tech" -%}
+<a class="card{% if include.featured %} card-featured{% endif %}" href="{{ include.post.url | relative_url }}">
+  <div class="thumb"><img src="{{ '/assets/img/thumb-' | append: t | append: '.svg' | relative_url }}" alt="" loading="lazy" width="640" height="360"></div>
+  <div class="card-body">
+    <span class="meta"><span class="tag tag-{{ t }}">{{ t }}</span> {{ include.post.date | date: "%-d %b %Y" }} &middot; {{ include.post.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+    <h3>{{ include.post.title }}</h3>
+    <p>{{ include.post.description | default: include.post.excerpt | strip_html | truncate: 150 }}</p>
+    <span class="more">Read the guide &rarr;</span>
+  </div>
+</a>

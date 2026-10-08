@@ -1,6 +1,6 @@
 # The Systems Edge
 
-A dark-theme Jekyll blog, compatible with GitHub Pages. Posts live in `_posts/`, layouts in `_layouts/`, styling in `assets/css/style.css`.
+A dark-theme Jekyll blog, compatible with GitHub Pages. Posts live in `_posts/`, layouts in `_layouts/`, styling in `assets/css/main.css`.
 
 ## Run it locally
 
@@ -77,7 +77,7 @@ Only link to programmes you've actually been accepted into, and keep the affilia
 _config.yml        site title, url/baseurl, plugins
 _layouts/          default (header/footer + disclosure), post, page
 _posts/            the articles
-assets/css/        style.css (dark theme)
+assets/css/        main.css (dark theme; not style.css - the Pages default theme owns that name)
 index.html         homepage with latest posts
 blog.html          all-posts list
 about.md           About page

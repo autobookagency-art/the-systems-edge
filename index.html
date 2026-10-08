@@ -3,23 +3,28 @@ layout: default
 title: Home
 ---
 <section class="hero">
+  <p class="eyebrow">Matched betting &middot; Prop firm trading &middot; AI tools</p>
   <h1>Systems that make money.</h1>
-  <p>Practical, no-hype guides to matched betting, prop firm trading and AI tools for business - from a UK trader
-    and agency operator.</p>
+  <p class="hero-sub">Practical, no-hype guides from a UK trader and agency operator. Honest about the risks,
+    specific about the steps.</p>
+  <div class="hero-cta">
+    <a class="btn" href="{{ '/blog/' | relative_url }}">Browse the guides</a>
+    <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About Matteo</a>
+  </div>
 </section>
 
-<h2 class="section-title">Latest posts</h2>
-<div class="cards">
-  {% for post in site.posts limit: 9 %}
-  <a class="card" href="{{ post.url | relative_url }}">
-    <span class="meta">{{ post.date | date: "%-d %b %Y" }}{% if post.topic %} &middot; {{ post.topic }}{% endif %}</span>
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.description | truncate: 150 }}</p>
-    <span class="more">Read the guide &rarr;</span>
-  </a>
-  {% else %}
-  <p>No posts yet.</p>
-  {% endfor %}
-</div>
+{% assign latest = site.posts.first %}
+{% if latest %}
+<h2 class="section-title">Latest guide</h2>
+{% include card.html post=latest featured=true %}
 
-{% if site.posts.size > 9 %}<p class="all"><a href="{{ '/blog/' | relative_url }}">See all {{ site.posts.size }} posts &rarr;</a></p>{% endif %}
+{% if site.posts.size > 1 %}
+<h2 class="section-title">More guides</h2>
+<div class="cards">
+  {% for post in site.posts offset: 1 limit: 8 %}{% include card.html post=post %}{% endfor %}
+</div>
+{% endif %}
+{% if site.posts.size > 9 %}<p class="all"><a href="{{ '/blog/' | relative_url }}">See all {{ site.posts.size }} guides &rarr;</a></p>{% endif %}
+{% else %}
+<p>No posts yet.</p>
+{% endif %}

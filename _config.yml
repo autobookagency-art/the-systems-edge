@@ -27,6 +27,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - SEARCH_CONSOLE.md
   - import_posts.py
   - vendor
   - node_modules
+
+# Google Search Console verification via meta tag (see SEARCH_CONSOLE.md, option B).
+# Uncomment and paste your token, or use the HTML-file method instead.
+# webmaster_verifications:
+#   google: PASTE_TOKEN_HERE
